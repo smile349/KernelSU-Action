@@ -1,16 +1,12 @@
 name: Check and Build
 
 env:
-  kernel_repository: PixelExperience-Devices/kernel_xiaomi_polaris
-  kernel_branch: thirteen
-  device: dipper
-  clang_version: r487747c
+  kernel_repository: AOSP-13-Mediatek/kernel_xiaomi_chopin
+  kernel_branch: eleven
+  device: chopin
+  clang_version: r383902
   defconfig: |
-    dipper_defconfig
-  kernel_patch: |
-    support-umount-modules-kernel.patch
-  kernelsu_patch: |
-    support-umount-modules-kernelsu.patch
+    chopin_user_defconfig
 
 on:
   schedule:
