@@ -1,10 +1,10 @@
 name: Check and Build
 
 env:
-  kernel_repository: AOSP-13-Mediatek/kernel_xiaomi_chopin
-  kernel_branch: eleven
-  device: chopin
-  clang_version: r383902
+  kernel_repository:AOSP-13-Mediatek/kernel_xiaomi_chopin
+  kernel_branch:eleven
+  device:chopin
+  clang_version:r383902
   defconfig: |
     chopin_user_defconfig
 
