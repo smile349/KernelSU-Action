@@ -29,6 +29,9 @@ jobs:
       - name: Check KernelSU version
         id: check_kernelsu_version
         run: |
+          sudo apt update
+          sudo apt-get install manpages-dev
+          sudo apt install build-essential
           local_version=$(curl -L --header 'authorization: Bearer ${{ github.token }}' https://api.github.com/repos/${{ github.repository }}/releases/latest | jq -r .tag_name)
           remote_version=$(curl -L https://api.github.com/repos/tiann/KernelSU/releases/latest | jq -r .tag_name)
           echo local_version=$local_version | tee -a $GITHUB_OUTPUT
